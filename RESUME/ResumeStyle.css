@@ -1,0 +1,24 @@
+body{
+    widows: 100%;border: 
+    1px solid black; 
+    padding: 5px;
+    background-color: cornsilk;
+    color: darkslategrey
+}
+.heading{
+    background-color: darkturquoise;
+    padding: 5px;
+    border: 1px solid black;
+}
+table{
+    background-color: honeydew;
+}
+.text{
+    background-color: yellowgreen;
+}
+#tabody{
+    background-color: skyblue;
+}
+#tablehead{
+    background-color: rgb(97, 97, 228);
+}
