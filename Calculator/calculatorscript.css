@@ -2,20 +2,41 @@ button{
     width: 90px;
     height: 50px;
     position: relative;
-    top: 220px;
+    top: 140px;
     left: 3%;
+    background-color: lightgreen;
 }
-#cal{
-    width: 400px;
-    height: 500px;
+#out{
+    width: 480px;
+    height: 580px;
     background-color: beige;
     position: relative;
-    top:  170px;
+    top:  110px;
     left: 35%;
+    background-image: url(../signup/images2.jpg);
+}
+#int{
+    width: 400px;
+    height: 500px;
+    background-color: aqua;
+    position: relative;
+    left: 8%;
+    background-image: url(../signup/up.jpeg);
+
 }
 #frame{
     position: relative;
     top: 50px;
     left: 3%;
-
+    background-color: lightblue; 
 }
+body {
+    background-image: url(../signup/background.jpg);
+ }
+
+ #frame{
+     width: 93%;
+     height: 130px;
+     border: 1px solid black;
+ }
+

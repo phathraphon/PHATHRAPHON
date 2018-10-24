@@ -3,6 +3,7 @@ var res = 0;
 var num = [];
 var opp = [];
 var dis = '';
+let temp;
 function fun1() {
     a = a * 10 + 1;
     dis += '1';
@@ -54,36 +55,49 @@ function fun0() {
     document.getElementById("input").innerHTML = dis;
 }
 function funadd() {
-    num.push(a);
-    opp.push('a');
-    dis = dis+"+";
-    a = 0;
-    document.getElementById("input").innerHTML = dis;
+    temp = opp.length - 1;
+    if ((opp[temp] != "a") && (opp[temp] != "s") && (opp[temp] != "m") && (opp[temp] != "d")) {
+        num.push(a);
+        opp.push('a');
+        dis = dis + "+";
+        a = 0;
+        document.getElementById("input").innerHTML = dis;
+        console.log(opp);
+    }
 }
 function funsub() {
-    num.push(a);
-    opp.push('s');
-    dis = dis+"-";
-    a = 0;
-    document.getElementById("input").innerHTML = dis;
+    let temp = opp.length - 1;
+    if ((opp[temp] != "a") && (opp[temp] != "s") && (opp[temp] != "m") && (opp[temp] != "d")) {
+        num.push(a);
+        opp.push('s');
+        dis = dis + "-";
+        a = 0;
+        document.getElementById("input").innerHTML = dis;
+    }
 }
 function funmul() {
-    num.push(a);
-    opp.push('m');
-    dis = dis+"*";
-    a = 0;
-    document.getElementById("input").innerHTML = dis;
+    let temp = opp.length - 1;
+    if ((opp[temp] != "a") && (opp[temp] != "s") && (opp[temp] != "m") && (opp[temp] != "d")) {
+        num.push(a);
+        opp.push('m');
+        dis = dis + "*";
+        a = 0;
+        document.getElementById("input").innerHTML = dis;
+    }
 }
 function fundiv() {
-    num.push(a);
-    opp.push('d');
-    dis = dis+"/";
-    a = 0;
-    document.getElementById("input").innerHTML = dis;
+    let temp = opp.length - 1;
+    if ((opp[temp] != "a") && (opp[temp] != "s") && (opp[temp] != "m") && (opp[temp] != "d")) {
+        num.push(a);
+        opp.push('d');
+        dis = dis + "/";
+        a = 0;
+        document.getElementById("input").innerHTML = dis;
+    }
 }
+
 function funeq() {
     num.push(a);
-    console.log(a);
     cal();
 }
 function fundel() {
@@ -91,7 +105,7 @@ function fundel() {
     num.length = 0;
     opp.length = 0;
     dis = '';
-    a=0;
+    a = 0;
     document.getElementById("input").innerHTML = "";
     document.getElementById("result").innerHTML = "";
 }
@@ -114,10 +128,10 @@ function cal() {
             res /= num[i];
         x += 1;
     }
-    document.getElementById("input").innerHTML = dis+"=";
-    num.length=0;
-    opp.length=0;
-    a=res;
+    document.getElementById("input").innerHTML = dis + "=";
+    num.length = 0;
+    opp.length = 0;
+    a = res;
     console.log(num);
     console.log(res);
     console.log(num);

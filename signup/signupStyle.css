@@ -1,10 +1,10 @@
 body {
-   background-image: url(file:///home/training/Desktop/html/background.jpg);
+   background-image: url(background.jpg);
 }
 
 .id{
    width: 360px;
-   background-image: url(file:///home/training/Desktop/html/images2.jpg);
+   background-image: url(images2.jpg);
    position: relative;
    left: 35%;
    top: 20%;
@@ -12,7 +12,7 @@ body {
 
 .reg {
     width: 300px;
-    background-image: url(file:///home/training/Desktop/html/up.jpeg);
+    background-image: url(up.jpeg);
     position: relative;
     left: 10%;
 }

@@ -5,32 +5,36 @@
 </head>
 
 <body>
-    <div id="cal">
-        <div id="frame">
-        <div id="input"><br></div>
-        <div id="result"><br></div>
+    <h1 style="position: relative;top: 3%;left: 45%;color: darkorange">Calculator</h1>
+    <div id="out"><br><br>
+        <div id="int">
+            <div id="frame">
+                <div id="input" style="color: coral; font-size: 1.8rem; padding-top: 10px; padding-left: 10px"></div><br><br>
+                <div id="result" style="color:rgb(6, 50, 133); font-size: 2rem; float: right; padding-right: 10px; position: static"><br></div>
+            </div>
+
+            <button type="button" onclick="fun1()">1</button>
+            <button type="button" onclick="fun2()">2</button>
+            <button type="button" onclick="fun3()">3</button>
+            <button type="button" onclick="funadd()">+</button><br>
+
+            <button type="button" onclick="fun4()">4</button>
+            <button type="button" onclick="fun5()">5</button>
+            <button type="button" onclick="fun6()">6</button>
+            <button type="button" onclick="funsub()">-</button><br>
+
+            <button type="button" onclick="fun7()">7</button>
+            <button type="button" onclick="fun8()">8</button>
+            <button type="button" onclick="fun9()">9</button>
+            <button type="button" onclick="funmul()">*</button><br>
+
+            <button type="button" onclick="fundel()">DEL</button>
+            <button type="button" onclick="fun0()">0</button>
+            <button type="button" onclick="funeq()">=</button>
+            <button type="button" onclick="fundiv()">/</button><br>
         </div>
-
-        <button type="button" onclick="fun1()">1</button>
-        <button type="button" onclick="fun2()">2</button>
-        <button type="button" onclick="fun3()">3</button>
-        <button type="button" onclick="funadd()">+</button><br>
-
-        <button type="button" onclick="fun4()">4</button>
-        <button type="button" onclick="fun5()">5</button>
-        <button type="button" onclick="fun6()">6</button>
-        <button type="button" onclick="funsub()">-</button><br>
-
-        <button type="button" onclick="fun7()">7</button>
-        <button type="button" onclick="fun8()">8</button>
-        <button type="button" onclick="fun9()">9</button>
-        <button type="button" onclick="funmul()">*</button><br>
-
-        <button type="button" onclick="fundel()">DEL</button>
-        <button type="button" onclick="fun0()">0</button>
-        <button type="button" onclick="funeq()">=</button>
-        <button type="button" onclick="fundiv()">/</button><br>
     </div>
+
 
     <script type="text/javascript" src="calculatorjs.js">
 
