@@ -1,12 +1,24 @@
 <html>
 
-<head></head>
+<head>
+    <link rel="stylesheet" href="pangramstyle.css">
+    <title>String Manupulation</title>
+</head>
 
 <body>
+    <div id="pang">
+        <h2>Pangram String:</h2>
+        <input type="text" name="inpt" id="inpt" class="first">
+        <button onclick="func()" class="first">submit</button>
+        <p id="result"></p>
+    </div>
 
-    <input type="text" name="inpt" id="inpt">
-    <button onclick="func()">submit</button>
-    <p id="result"></p>
+    <div id="manu">
+        <h2>Specific String Type:</h2>
+        <input type="text" name="txt" id="txt" class="second">
+        <button onclick="fun()" class="second">Submit</button>
+        <p id="res"></p>
+    </div>
 
     <script type="text/javascript" src="pangramjs.js">
     </script>

@@ -1,0 +1,21 @@
+#pang{
+    padding: 2%;
+    height: 40%;
+    border: 5px solid rebeccapurple;
+    color: navy;
+}
+#manu{
+    color: navy;
+    padding: 2%;
+    height: 40%;
+    border: 5px solid rebeccapurple; 
+}
+body{
+    padding: 1%;
+    background-image: url(../signup/background.jpg);
+}
+.first, .second{
+    padding: 7px;
+    border-radius: 15px;
+}
+
