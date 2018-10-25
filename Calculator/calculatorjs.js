@@ -4,115 +4,161 @@ var num = [];
 var opp = [];
 var dis = '';
 let temp;
+let ui;
+let neg = 0;
 function fun1() {
     a = a * 10 + 1;
     dis += '1';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function fun2() {
     a = a * 10 + 2;
     dis += '2';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function fun3() {
     a = a * 10 + 3;
     dis += '3';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function fun4() {
     a = a * 10 + 4;
     dis += '4';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function fun5() {
     a = a * 10 + 5;
     dis += '5';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function fun6() {
     a = a * 10 + 6;
     dis += '6';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function fun7() {
     a = a * 10 + 7;
     dis += '7';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function fun8() {
     a = a * 10 + 8;
     dis += '8';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function fun9() {
     a = a * 10 + 9;
     dis += '9';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function fun0() {
     a = a * 10 + 0;
     dis += '0';
+    ui = 0;
     document.getElementById("input").innerHTML = dis;
 }
 function funadd() {
-    temp = opp.length - 1;
-    if ((opp[temp] != "a") && (opp[temp] != "s") && (opp[temp] != "m") && (opp[temp] != "d")) {
+    temp = dis.length - 1;
+    if ((dis.charAt(temp) != "+") && (dis.charAt(temp) != "-") && (dis.charAt(temp) != "*") && (dis.charAt(temp) != "/")) {
+        if (neg == 1) {
+            a = a * (-1);
+            neg = 0;
+        } 
         num.push(a);
         opp.push('a');
         dis = dis + "+";
         a = 0;
+        ui = 1;
         document.getElementById("input").innerHTML = dis;
-        console.log(opp);
     }
 }
 function funsub() {
-    let temp = opp.length - 1;
-    if ((opp[temp] != "a") && (opp[temp] != "s") && (opp[temp] != "m") && (opp[temp] != "d")) {
-        num.push(a);
-        opp.push('s');
-        dis = dis + "-";
-        a = 0;
-        document.getElementById("input").innerHTML = dis;
+    temp = dis.length - 1;
+    if (ui == 1) {
+        if ((dis.charAt(temp) == "+") || (dis.charAt(temp) == "-") || (dis.charAt(temp) == "*") || (dis.charAt(temp) == "/")) {
+            dis += "-";
+            neg = 1;
+            ui += 1;
+            document.getElementById("input").innerHTML = dis;
+        }
+    }
+    if (ui == 0) {
+        if ((opp[temp] != "a") && (opp[temp] != "s") && (opp[temp] != "m") && (opp[temp] != "d")) {
+            if (neg == 1) {
+                a = a * (-1);
+                neg = 0;
+            }
+            num.push(a);
+            opp.push('s');
+            dis = dis + "-";
+            a = 0;
+            ui = 1;
+            document.getElementById("input").innerHTML = dis;
+        }
     }
 }
 function funmul() {
-    let temp = opp.length - 1;
-    if ((opp[temp] != "a") && (opp[temp] != "s") && (opp[temp] != "m") && (opp[temp] != "d")) {
+    temp = dis.length - 1;
+    if ((dis.charAt(temp) != "+") && (dis.charAt(temp) != "-") && (dis.charAt(temp) != "*") && (dis.charAt(temp) != "/")) {
+        if (neg == 1) {
+            a = a * (-1);
+            neg = 0;
+        }
         num.push(a);
         opp.push('m');
         dis = dis + "*";
         a = 0;
+        ui = 1;
         document.getElementById("input").innerHTML = dis;
     }
 }
 function fundiv() {
-    let temp = opp.length - 1;
-    if ((opp[temp] != "a") && (opp[temp] != "s") && (opp[temp] != "m") && (opp[temp] != "d")) {
+    temp = dis.length - 1;
+    if ((dis.charAt(temp) != "+") && (dis.charAt(temp) != "-") && (dis.charAt(temp) != "*") && (dis.charAt(temp) != "/")) {
+        if (neg == 1) {
+            a = a * (-1);
+            neg = 0;
+        }
         num.push(a);
         opp.push('d');
         dis = dis + "/";
         a = 0;
+        ui = 1;
         document.getElementById("input").innerHTML = dis;
     }
 }
 
 function funeq() {
-    num.push(a);
-    cal();
+    temp = dis.length - 1;
+    if ((dis.charAt(temp) != "+") && (dis.charAt(temp) != "-") && (dis.charAt(temp) != "*") && (dis.charAt(temp) != "/")) {
+        if (neg == 1) {
+            a = a * (-1);
+            neg = 0;
+        }
+        num.push(a);
+        cal();
+    }
 }
 function fundel() {
     a = 0;
     num.length = 0;
     opp.length = 0;
     dis = '';
-    a = 0;
     document.getElementById("input").innerHTML = "";
     document.getElementById("result").innerHTML = "";
 }
 
 
 function cal() {
-    console.log(num);
     var x = 0;
     res = num[0];
     for (var i = 1; i < num.length; i++) {
@@ -132,9 +178,6 @@ function cal() {
     num.length = 0;
     opp.length = 0;
     a = res;
-    console.log(num);
-    console.log(res);
-    console.log(num);
     document.getElementById("result").innerHTML = res;
 }
 
